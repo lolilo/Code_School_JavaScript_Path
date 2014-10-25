@@ -5,6 +5,9 @@ var lighthouseRock = {
   capacity: 30,
   secretPassageTo: "Underwater Outpost",
   numRangers: 0, 
+
+  // don't have location passed in if this function is attached to the location in question -- for next time! 
+  // I went ahead of the Code School lesson here. 
   addRanger: function (location, name, skillz, station) {
   	lighthouseRock.numRangers++;
   	location["ranger" + lighthouseRock.numRangers] = {
