@@ -1,8 +1,7 @@
 function assignLaser( shark, sharkList ){
-  var stationAssignment;
   for(var i = 0; i<sharkList.length; i++){
     if(shark == sharkList[i]){
-      stationAssignment = function(){
+      return function(){
         alert("Yo, " +
               shark +
               "!\n" +
@@ -14,5 +13,4 @@ function assignLaser( shark, sharkList ){
       };
     }
   }
-  return stationAssignment;
 }
