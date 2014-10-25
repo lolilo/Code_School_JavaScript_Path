@@ -22,4 +22,16 @@ lighthouseRock.addRanger(lighthouseRock, "Nick Walsh", "magnification burn", 2);
 lighthouseRock.addRanger(lighthouseRock, "Drew Barontini", "uppercut launch", 3);
 lighthouseRock.addRanger(lighthouseRock, "Christine Wong", "bomb defusing", 1);
 
+
+// declared function version
+
+function addRanger(location, name, skillz, station){
+  location.numRangers++;
+  location["ranger" + location.numRangers] = {
+    name: name, 
+    skillz: skillz, 
+    station: station 
+  }; 
+}
+
 // console.log(lighthouseRock.ranger1);
