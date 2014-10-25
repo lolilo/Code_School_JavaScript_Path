@@ -21,5 +21,17 @@ var vehicle3 = {
 	"storedAt": "Underwater Outpost"
 }
 
-console.log(vehicle1.capacity);
-console.log(vehicle1["capacity"]);
+// console.log(vehicle1.capacity);
+// console.log(vehicle1["capacity"]);
+
+var vehicles = [vehicle1, vehicle2, vehicle3];
+
+var findVehicle = function (name, list) {
+	for (var i = 0; i < list.length; i++) {
+		if (list[i].type == name) {
+			return list[i].storedAt;
+		}
+	}
+}
+
+findVehicle("Submarine", vehicles);
