@@ -3,11 +3,11 @@ function warningMaker( obstacle ){
   var zones = [];
   return function ( number, location ) {
     count++;
-    zones.push(location); 
+    zones.push([location, number]); 
 
     var zonesAsString = '';
     for (var i=0; i<zones.length; i++) {
-        zonesAsString += "\n" + zones[i];
+        zonesAsString += "\n" + zones[i][0] + " (" + zones[i][1] + ")";
     }
 
     alert("Beware! There have been " +
