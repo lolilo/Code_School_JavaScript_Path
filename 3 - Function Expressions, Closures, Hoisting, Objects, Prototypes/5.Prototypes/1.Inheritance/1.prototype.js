@@ -29,3 +29,5 @@ Array.prototype.countCattle = function (parameter) {
 }
   
 console.log(canyonCows.countCattle("cow"));
+
+alert(canyonCows.countCattle("calf") + valleyCows.countCattle("bull") + forestCows.countCattle("cow"));
