@@ -1,8 +1,12 @@
-var AppRouter = Backbone.Router.extend({
+var AppRouter = new (Backbone.Router.extend({
   routes: { "appointments/:id": "show", "": "index" },
 
-  initialize: function(options){
-    this.appointmentList = options.appointmentList;
+  initialize: function(){
+    this.appointmentList = new AppointmentList();
+  },
+
+  start: function() {
+    Backbone.history.start( {pushState: true} );
   },
 
   index: function(){
@@ -19,4 +23,6 @@ var AppRouter = Backbone.Router.extend({
     $('#app').html(appointmentView.el);
     appointment.fetch();
   }
-});
+}));
+
+$(function() { AppRouter.start() });
